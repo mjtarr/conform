@@ -548,7 +548,7 @@ domains and populations.</small>
             </li>
     
             <li>The monetary costs of collecting data can present a challenge to any single lab (e.g., five participants across 25 x one~hour
-              scans could easily cost on the order of \$100,000) and risks over-representing the interests of the small number of labs with
+              scans could easily cost on the order of $100,000) and risks over-representing the interests of the small number of labs with
               the necessary resources.
             </li>
 
@@ -567,7 +567,47 @@ domains and populations.</small>
       </div>
     </div>
   </section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title">Towards a dynamic foundation model for vision fMRI</h2>
+
+    <div class="content has-text-justified">
+          <p><small>
+            We propose CONFORM (Crowd-Sourced Open Neuroscience fMRI Foundation Model)--a strategy for building foundational human vision fMRI models through community-contributed datasets and models. Following previous efforts in systems neuroscience, we propose to leverage multi-site crowd-sourcing to enable collection of larger and more diverse datasets, along with new computational advances to facilitate coherent analysis. As detailed below, the building blocks of CONFORM are already in place, spanning four key domains:
+
+    <ol>
+
+    <li><i>A larger-scale and highly diverse dataset/i> that aggregates close to 100 participants and 100,000s of natural scenes depicting 1000's of object categories/concepts in context.  ``MOSAIC'' is a scalable framework for combining extant fMRI datasets, using common preprocessing and registration, into a single, extremely large-scale and extensible vision dataset. </li>
     
+    <li><i>Higher data quality</i> through an enhanced preprocessing pipeline to improve the signal-to-noise ratio of measured BOLD responses. Building on \textit{GLMSingle}~\cite{Prince2022} and Generative Modeling of Signal and Noise (\textit{GSN~\cite{kay2025disentangling}}), we will develop \textit{PSN} (Partitioning of Signal and Noise)—a powerful, generative low-rank denoising method that optimally separates signal from noise in neural data, outperforming trial-averaging and PCA, especially when noise is structured or complex (as in fMRI).</li>
+  
+    <li><i>Enhanced generalization</i>
+    to new participants from outside-of-dataset studies using ``BraInCoRL''—a meta-learned in-context foundation model that enables generalization using only a small amount of additional data.</li>
+    
+    <li><i>Crowd-sourcing infrastructure</i> to support the continuous integration of data from new studies across unique participants and data collection sites.</li>
+            </ol>
+
+Building on these methodological advances and the lessons learned from distributed large-scale fMRI datasets~\cite{chang2019bold5000,allen2022massive,things2023,gong_large-scale_2023,lahner_modeling_2024}, CONFORM will be a unique collaborative modeling strategy that will enable the creation of large-scale vision foundation fMRI models on datasets with improved signal quality, more participants, greater stimulus diversity, and which, critically, generalizes to new participants and studies in low data regimes. Longer term— across labs, participants, and MRI systems, we further propose a ``crowd-sourced'' community-driven effort to collect and integrate new data, thereby continuously improving the models. Given the challenges of collecting ever-larger and more diverse datasets at a single site, we suggest that crowd-sourcing is the only tenable solution for building appropriate-scale, truly foundational neural datasets. However, developing a viable crowd-sourcing infrastructure at this scale remains an unsolved challenge with a very high risk/reward tradeoff.
+
+We are taking on this challenge by integrating and further developing recent advances in fMRI preprocessing, data aggregation, and generalization. CONFORM will also include the infrastructure for continuously expanding the dataset's size and the diversity of its stimuli~\cite{wang2022incorporating}. Our project will use a two-pronged approach for data contributions: locally directed and globally directed.
+
+The \textit{locally directed} model is straightforward: the CONFORM distribution website will also accept contributions. In contrast to other neural data repositories~\cite{markiewicz2021openneuro}, we will provide detailed specifications for the acceptable designs, stimuli, tasks, and data formats to ensure submissions can be seamlessly integrated into CONFORM with high data quality. One attractive aspect of a locally directed model is that CONFORM may be able to re-purpose extant data that was already collected for a different purpose, thus giving new life to data that may have been otherwise dormant for years. 
+At the same time, processing all available public data is not feasible. As an alternative, we will facilitate researchers re-analyzing their datasets with our pipeline.
+Our goal with the locally directed model is to be as inclusive as possible with stimuli and tasks, even with necessary limitations.
+
+The \textit{globally directed} model is more ambitious and forward-looking, and offers a greater potential payoff. We will provide a complete, turn-key study design to participating research sites, streamlining the data collection process (Fig. ~\ref{fig:teaser}). We will optimize the selection of stimulus images to achieve the best possible distribution of images within natural image space across many participants~\cite{rothsample}. We will also optimize for repeated stimuli and partial stimulus overlap across the population. Similarly, we will optimize the study design with respect to scanning parameters and trial structure. Collaborators will be able to specify both the length of scan sessions and the total number of participants they contribute. They will then be provided with complete scan protocols, experimental control files, and stimulus images. An interface on the same website used for distribution will allow them to download these files and upload their collected data for incorporation into the dataset.
+
+CONFORM's framework towards a scalable foundation fMRI model will enable powerful insights into human vision. Datasets within CONFORM will continue to grow in size and stimulus diversity as the community contributes data. Critically, the resultant models will achieve improved generalization to new participants across diverse subpopulations, requiring only a relatively small amount of data per individual. As such, CONFORM will dramatically broaden the accessibility of NeuroAI methods, empowering researchers in a much wider range of scientific domains to make new discoveries.
+            </small>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
