@@ -522,26 +522,44 @@ domains and populations.
             impactful discoveries, even this strategy is neither sustainable nor scalable for both scientific and practical reasons:
             <br>
 
-            1. Successful data collection at this scale depends on <it>heroic</it> efforts by both experimenters and participants.
+            <ol>
+
+            <li>Successful data collection at this scale depends on <it>heroic</it> efforts by both experimenters and participants.
             The time commitment and scheduling complexities are onerous: participants, experimenters, and scanners must remain
             consistently healthy and available (e.g., in both the BOLD5000 and NSD datasets at least one participant failed to
             complete the study; in the THINGS dataset one participant was canceled due to ``technical issues'').
+            </li>
             
-            2. Even with this extraordinary amount of effort, data was collected from only 3-8 participants -- a small number that
+            <li>Even with this extraordinary amount of effort, data was collected from only 3-8 participants -- a small number that
             does not support the hoped-for population diversity expected of human neural foundation models.
+            </li>
 
-            3. Stimulus diversity is necessarily limited by small participant pools and the need for stimulus repeats and/or overlap
-            across participants~\cite{Prince2022}. Even within a single recurring participant, only a limited number of observations
+            <li>Stimulus diversity is necessarily limited by small participant pools and the need for stimulus repeats and/or overlap
+            across participants. Even within a single recurring participant, only a limited number of observations
             are possible.<br>Moreover, controlled tasks and stimulus selection methods have further reduced diversity in the visual
-            images included in each dataset: NSD uses only COCO images (only 80 object categories~\cite{lin2014microsoft}, which
+            images included in each dataset: NSD uses only COCO images (only 80 object categories, which
             leave gaps in many regions of natural image space), BOLD5000 uses COCO as well as SUN and ImageNetimages, and THINGS
-            uses a larger number of ``concepts'', but depicted as single cropped objects that show little context. 
+            uses a larger number of ``concepts'', but depicted as single cropped objects that show little context.
+            </li>
     
-            4. Creating the infrastructure for data management and distribution is a considerable technical challenge. Short-term it requires a robust and replicable data processing pipeline and a reliable platform for data distribution. Long-term it requires stability—years later the distribution website should remain readily accessible.
+            <li>Creating the infrastructure for data management and distribution is a considerable technical challenge. Short-term it
+              requires a robust and replicable data processing pipeline and a reliable platform for data distribution. Long-term it requires
+              stability—years later the distribution website should remain readily accessible.
+            </li>
     
-            5. The monetary costs of collecting data can present a challenge to any single lab (e.g., five participants across 25 x one~hour scans could easily cost on the order of \$100,000) and risks over-representing the interests of the small number of labs with the necessary resources.
+            <li>The monetary costs of collecting data can present a challenge to any single lab (e.g., five participants across 25 x one~hour
+              scans could easily cost on the order of \$100,000) and risks over-representing the interests of the small number of labs with
+              the necessary resources.
+            </li>
 
-            Despite their increased scale relative to standard fMRI studies, these datasets still present significant challenges in the construction of NeuroAI models. The number of observations and participants is still small for purposes of model training, and data quality is dependent on preprocessing methods. More importantly, prediction accuracy and decoding performance are typically high only when trained and tested within the same participant—due to inherent structural and functional differences between individual brains and, at present, weak methods for generalizing across them. Consequently, when models are applied across participants, even within the same study, their performance and decoding capabilities decrease dramatically.
+            </ol>
+            Despite their increased scale relative to standard fMRI studies, these datasets still present significant challenges in the
+            construction of NeuroAI models. The number of observations and participants is still small for purposes of model training, and
+            data quality is dependent on preprocessing methods. More importantly, prediction accuracy and decoding performance are
+            typically high only when trained and tested within the same participant—due to inherent structural and functional
+            differences between individual brains and, at present, weak methods for generalizing across them. Consequently, when
+            models are applied across participants, even within the same study, their performance and decoding capabilities decrease
+            dramatically.
           </p>
         </div>
       
