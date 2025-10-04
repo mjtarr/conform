@@ -562,7 +562,7 @@ code {
   text-decoration: none;
   color: inherit;
   transition: var(--transition);
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
 }
 
 .work-item:hover {
@@ -594,7 +594,7 @@ code {
 .work-item .fas {
   color: var(--text-light);
   font-size: 0.9rem;
-  margin-top: 0.2rem;
+  /* margin-top: 0.2rem; */
   flex-shrink: 0;
 }
 
